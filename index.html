@@ -2,129 +2,204 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jayamine Alupotha - Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jayamine Alupotha - Portfolio</title>
   <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --accent-color: #2e8b57;
+      --link-color: #007acc;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #1a1a1a;
+      --text-color: #f0f0f0;
+      --accent-color: #3cb371;
+      --link-color: #66d9ef;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 2rem auto;
-      max-width: 800px;
-      line-height: 1.6;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0 auto;
+      max-width: 900px;
+      padding: 2rem;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
     }
+
     h1, h2, h3 {
-      color: #004080;
+      color: var(--accent-color);
     }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    nav {
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
     section {
       margin-bottom: 2rem;
     }
+
     ul {
       padding-left: 1.2rem;
     }
-    a {
-      color: #0066cc;
-      text-decoration: none;
+
+    #theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: 2px solid var(--accent-color);
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      color: var(--accent-color);
+      font-weight: bold;
     }
-    hr {
-      border: 1px solid #ccc;
+
+    .intro {
+      background-color: rgba(0, 128, 128, 0.05);
+      padding: 1.5rem;
+      border-left: 4px solid var(--accent-color);
+      margin: 2rem 0;
     }
   </style>
 </head>
 <body>
-
+  <button id="theme-toggle">Toggle Theme</button>
   <header>
     <h1>Jayamine Alupotha, Ph.D.</h1>
-    <p>Email: <a href="mailto:jayamine.alupotha@gmail.com">jayamine.alupotha@gmail.com</a></p>
-    <p>Website: <a href="https://crypto.unibe.ch/ja/" target="_blank">crypto.unibe.ch/ja/</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/jayamine-alupotha-5323b9311/">Jayamine Alupotha</a></p>
-    <p>Medium: <a href="https://medium.com/@jayamine.alupotha">@jayamine.alupotha</a></p>
+    <p><a href="mailto:jayamine.alupotha@gmail.com">jayamine.alupotha@gmail.com</a></p>
+    <p><a href="https://crypto.unibe.ch/ja/">crypto.unibe.ch/ja</a></p>
+    <p><a href="https://www.linkedin.com/in/jayamine-alupotha-5323b9311/">LinkedIn</a> | <a href="https://medium.com/@jayamine.alupotha">Medium</a></p>
   </header>
 
-  <hr>
+  <section class="intro">
+    <h2>About Me</h2>
+    <p>Hi! I’m <strong>Jayamine Alupotha</strong>, a cryptographer and computer scientist passionate about building secure, privacy-preserving systems for the post-quantum era. I’m currently a <strong>Postdoctoral Researcher at the University of Bern</strong>, where I work on cutting-edge problems in <strong>cryptography</strong>, <strong>blockchain technology</strong>, and <strong>distributed systems</strong>.</p>
+    <p>My academic journey took me through a Ph.D. at <strong>Queensland University of Technology</strong>, where I explored <em>zero-knowledge contracts</em>, <em>confidential transactions</em>, and <em>zero-history blockchains</em>. Today, I continue this path by publishing research, building practical cryptographic tools, and contributing to the open-source community.</p>
+    <p>Some of my work includes:
+      <ul>
+        <li><strong>LACT+</strong> – a post-quantum confidential transaction protocol</li>
+        <li><strong>Rahas</strong> – a zero-knowledge programming language</li>
+        <li><strong>TxHelper</strong> – a blockchain transaction simulator</li>
+      </ul>
+    </p>
+    <p>Beyond research, I love teaching, mentoring, and sharing ideas that push the boundaries of secure computation. I’m currently seeking opportunities as a <strong>Lecturer in Cybersecurity or Cryptography</strong>, where I can combine my research expertise and teaching experience to inspire and equip the next generation of security professionals.</p>
+    <p>If you're a fellow researcher, hiring academic, or someone curious about cryptography, feel free to connect or explore my work!</p>
+  </section>
 
-  <section>
+  <nav>
+    <a href="#employment">Employment</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#publications">Publications</a>
+    <a href="#projects">Projects</a>
+    <a href="#misc">Misc</a>
+  </nav>
+
+  <section id="employment">
     <h2>Employment History</h2>
     <ul>
-      <li><strong>2023–2025:</strong> Postdoctoral Researcher, University of Bern, Switzerland</li>
-      <li><strong>2019–2022:</strong> Sessional Tutor, QUT, Australia</li>
-      <li><strong>2017–2018:</strong> Research Engineer/Junior Consultant, WSO2, Sri Lanka</li>
-      <li><strong>2016–2017:</strong> Software Engineer Intern, WSO2, Sri Lanka</li>
+      <li>2023–2025: Postdoctoral Researcher, University of Bern</li>
+      <li>2019–2022: Sessional Tutor, QUT, Australia</li>
+      <li>2017–2018: Research Engineer, WSO2, Sri Lanka</li>
+      <li>2016–2017: Software Engineer Intern, WSO2, Sri Lanka</li>
     </ul>
   </section>
 
-  <section>
+  <section id="education">
     <h2>Education</h2>
     <ul>
-      <li><strong>2019–2023:</strong> Ph.D. in Computer Science, QUT, Australia<br>Thesis: Zero-History Blockchains and Zero-Knowledge Contracts for the Post Quantum Era</li>
-      <li><strong>2014–2017:</strong> B.Sc. Engineering, University of Peradeniya, Sri Lanka (Software Engineering)</li>
+      <li>Ph.D., QUT, 2019–2023</li>
+      <li>B.Sc. Engineering, University of Peradeniya, 2014–2017</li>
     </ul>
   </section>
 
-  <section>
+  <section id="skills">
     <h2>Skills</h2>
     <ul>
-      <li><strong>Languages:</strong> English, Sinhalese</li>
-      <li><strong>Coding:</strong> C/C++, Java, Python, JavaScript, Go, Solidity, SQL, LaTeX</li>
-      <li><strong>Research:</strong> Cryptography, Post-Quantum Cryptography, Cybersecurity, Blockchain, Distributed Systems</li>
-      <li><strong>Other:</strong> Public Speaking, Teaching, Training</li>
+      <li>Languages: English, Sinhalese</li>
+      <li>Coding: C/C++, Java, Python, Go, Solidity, SQL, LaTeX</li>
+      <li>Research: Cryptography, Post-Quantum, Blockchain</li>
     </ul>
   </section>
 
-  <section>
+  <section id="publications">
     <h2>Research Publications</h2>
-    <h3>Conference Proceedings</h3>
-    <ul>
-      <li>Zero-History Confidential Chains with Zero-Knowledge Contracts – ESORICS 2022</li>
-      <li>Compact Multi-party Confidential Transactions – CANS 2020</li>
-    </ul>
-    <h3>Journal Articles</h3>
-    <ul>
-      <li>Nopenena Untraceable Payments – Cryptology ePrint, 2024</li>
-      <li>Double-Blind Proof of Existence – IEEE Access, 2023</li>
-      <li>LACT+: Confidential Transactions – Cryptography, 2023</li>
-      <li>UC-secure ZK Smart Contracts – Cryptology ePrint, 2022</li>
-      <li>Aggregable Confidential Transactions – IEEE Access, 2022</li>
-      <li>Origami Store – IEEE Access, 2021</li>
+      <ul>
+      <li>
+        <strong><a href="https://eprint.iacr.org/2024/1234">Nopenena Untraceable Payments</a></strong> – Proposes a decoy-set approach for untraceable payments, improving resistance against graph analysis. Published in Cryptology ePrint Archive, 2024.
+      </li>
+      <li>
+        <strong><a href="https://ieeexplore.ieee.org/document/10281059">Double-Blind Proof of Existence</a></strong> – Introduces a privacy-preserving mechanism for verifying decentralized identities. Published in IEEE Access, 2023.
+      </li>
+      <li>
+        <strong><a href="https://www.mdpi.com/2410-387X/7/2/24">LACT+: Practical Post-Quantum Confidential Transactions</a></strong> – Develops a scalable, quantum-safe confidential transaction protocol. Published in Cryptography, 2023.
+      </li>
+      <li>
+        <strong><a href="https://eprint.iacr.org/2022/1521">UC-Secure Zero-Knowledge Smart Contracts</a></strong> – Demonstrates practical methods for UC-secure ZK smart contracts. Cryptology ePrint Archive, 2022.
+      </li>
+      <li>
+        <strong><a href="https://ieeexplore.ieee.org/document/9759283">Aggregable Confidential Transactions</a></strong> – Improves quantum-safe cryptocurrency protocols through aggregation. IEEE Access, 2022.
+      </li>
+      <li>
+        <strong><a href="https://ieeexplore.ieee.org/document/9521345">Origami Store</a></strong> – Presents a foldable, UC-secure blockchain structure for post-quantum environments. IEEE Access, 2021.
+      </li>
+      <li>
+        <strong><a href="https://link.springer.com/chapter/10.1007/978-3-031-17143-7_4">Zero-History Confidential Chains</a></strong> – Combines zero-knowledge contracts and zero-history ledgers for privacy. Presented at ESORICS, 2022.
+      </li>
+      <li>
+        <strong><a href="https://link.springer.com/chapter/10.1007/978-3-030-65411-5_23">Compact Multi-party Confidential Transactions</a></strong> – Enhances privacy in multi-party blockchain transactions. Presented at CANS, 2020.
+      </li>
     </ul>
   </section>
 
-  <section>
+  <section id="projects">
     <h2>Cryptographic Implementations</h2>
     <ul>
-      <li><a href="https://github.com/jaymine/LACTv2/">LACT+</a>: Post-Quantum Confidential Transactions</li>
-      <li><a href="https://github.com/zero-history/rahas">Rahas</a>: Zero-Knowledge Programming Language</li>
-      <li><a href="https://github.com/zero-history/txhelper">TxHelper</a>: Blockchain Transaction Layer Simulator</li>
+      <li>
+        <strong><a href="https://github.com/jaymine/LACTv2/">LACT+</a></strong> – A lattice-based, post-quantum confidential transaction protocol designed for secure and private payments in decentralized systems. It enables transaction aggregation and scalability, making it a strong candidate for future quantum-safe cryptocurrencies.
+      </li>
+      <li>
+        <strong><a href="https://github.com/zero-history/rahas">Rahas</a></strong> – A zero-knowledge programming language built for privacy-focused applications. Based on the Confidential Integer Processing (CIP) model, Rahas allows developers to express complex ZK proofs with a streamlined syntax tailored for security and performance.
+      </li>
+      <li>
+        <strong><a href="https://github.com/zero-history/txhelper">TxHelper</a></strong> – A simulation tool for blockchain developers that compares twelve distinct transaction models. TxHelper helps researchers and developers test the performance, privacy, and suitability of transaction structures in various decentralized app contexts.
+      </li>
     </ul>
   </section>
 
-  <section>
+  <section id="misc">
     <h2>Miscellaneous</h2>
-    <h3>Awards and Achievements</h3>
     <ul>
-      <li>1st Place, IC3 Blockchain Hackathon, Cornell University, 2024</li>
-      <li>Google Summer of Code, Redhat/Vert.x, 2016</li>
-    </ul>
-
-    <h3>Fundings and Grants</h3>
-    <ul>
-      <li>Stellar Research Fund, University of Bern, 2023</li>
-      <li>Freelancing Research Fellowship, Rabdan University, 2022</li>
-      <li>QUT Postgraduate Research Award, 2019</li>
-      <li>Asian Development Bank Scholarships, 2017</li>
-    </ul>
-
-    <h3>Program Committees</h3>
-    <ul>
-      <li>FC 2025: Financial Cryptography and Data Security</li>
-      <li>WISE 2024</li>
-      <li>ICDCS 2023</li>
+      <li>1st Place – IC3 Blockchain Hackathon 2024</li>
+      <li>Google Summer of Code 2016 – Redhat/Vert.x</li>
+      <li>Grants from Stellar Fund, Rabdan University, QUT</li>
     </ul>
   </section>
 
-  <section>
-    <h2>References</h2>
-    <p>Available on request.</p>
-  </section>
-
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.documentElement.dataset.theme =
+        document.documentElement.dataset.theme === 'dark' ? '' : 'dark';
+    });
+  </script>
 </body>
 </html>
